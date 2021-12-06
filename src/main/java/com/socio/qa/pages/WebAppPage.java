@@ -224,32 +224,6 @@ public class WebAppPage extends TestBase{
 				return new WebAppPage();
 			}
 			
-			public WebAppPage clickShutter(){
-				
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-				Actions action = new Actions(driver);
-				
-				action.moveToElement(shutterAction).build().perform();
-				JavascriptExecutor js = (JavascriptExecutor)driver;
-				js.executeScript("arguments[0].click();", shutterAction);			
-					
-				return new WebAppPage();
-			}
-			
-			public WebAppPage clickNext(){
-				
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-				Actions action = new Actions(driver);
-				
-				action.moveToElement(nextAction).build().perform();
-				JavascriptExecutor js = (JavascriptExecutor)driver;
-				js.executeScript("arguments[0].click();", nextAction);			
-					
-				return new WebAppPage();
-			}
-			
 			public WebAppPage clickSave(){
 				
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
